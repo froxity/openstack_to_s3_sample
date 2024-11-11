@@ -115,10 +115,6 @@ Ensure that the following environment variables are set correctly for both AWS a
 - **Thread Pool Size**: The `--maxWorkers` parameter controls the number of concurrent threads for upload. Adjust this based on your system's capacity.
 - **Bandwidth Limitation**: The `--bandwidthLimitMb` helps in managing the upload speed to prevent network congestion.
 
-## License
-
-This script is provided "as-is" without warranty of any kind, express or implied. Please review and adjust the script as per your requirements.
-
 ## Contact
 
 If you have any questions or issues, feel free to reach out to the script author or open an issue in your repository. Contributions and suggestions for improvement are welcome.
