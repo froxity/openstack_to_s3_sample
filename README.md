@@ -46,7 +46,7 @@ This Python script provides functionality to transfer objects from an OpenStack 
 Run the script using the command line with the required arguments:
 
 ```sh
-python3 script.py --openStackContainer <OpenStackContainerName> --s3Bucket <S3BucketName> \
+python3 openstack_s3_transfer.py --openStackContainer <OpenStackContainerName> --s3Bucket <S3BucketName> \
   --maxWorkers <MaxWorkers> --regionName <AWSRegion> --bandwidthLimitMb <BandwidthLimitMb>
 ```
 
@@ -61,7 +61,7 @@ python3 script.py --openStackContainer <OpenStackContainerName> --s3Bucket <S3Bu
 ### Example
 
 ```sh
-python3 script.py --openStackContainer oss_container_name --s3Bucket s3_bucket_name \
+python3 openstack_s3_transfer.py --openStackContainer oss_container_name --s3Bucket s3_bucket_name \
   --maxWorkers 10 --regionName ap-southeast-1 --bandwidthLimitMb 1
 ```
 
