@@ -14,8 +14,14 @@ from keystoneauth1 import session
 from keystoneauth1.identity import v3 as auth_v3
 
 def create_logger(openStackContainer, s3Bucket):
+    log_date = datetime.now().strftime("%Y-%m-%d")
+    log_base_directory = os.path.expanduser("~/openstack-s3-transfer/logs")
+    log_directory = f"{log_base_directory}/{log_date}"
+    os.makedirs(log_base_directory, exist_ok=True)
+    os.makedirs(log_directory, exist_ok=True)
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    log_filename = f"{timestamp}_{openStackContainer}_to_{s3Bucket}.log"
+    log_filename = f"{log_directory}/{timestamp}_{openStackContainer}_to_{s3Bucket}.log"
+    # Setup logging configuration
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
